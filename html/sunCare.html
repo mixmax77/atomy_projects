@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>애터미 선케어 제품</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#f6f7f9;
+      color:#111;
+    }
+
+    .wrap{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .top{
+      margin-bottom: 12px;
+    }
+
+    .top a{
+      text-decoration:none;
+      font-size:14px;
+      color:#4f46e5;
+    }
+
+    h1{
+      font-size:20px;
+      margin: 6px 0 12px;
+    }
+
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+    }
+
+    .page-actions .btn {
+      display: inline-block;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.18);
+      text-decoration: none;
+    }
+
+    .guide-msg{
+      margin: 0 0 14px;
+      padding: 10px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #1f2937;
+      background: #eef6ff;
+      border: 1px solid #cfe8ff;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 상단 네비 -->
+    <div class="page-actions">
+      <a class="btn" href="/index.html">홈으로</a>
+    </div>
+
+    <h1>선케어 제품 바로가기</h1>
+    <p class="guide-msg">
+      💡 제품 이미지를 클릭하면 해당 제품의 <strong>구매 페이지</strong>로 이동합니다.
+    </p>
+    <!-- 이미지 맵 -->
+    <img src="/images/sunCare.jpg"
+         alt="애터미 선케어 제품"
+         usemap="#map-suncare">
+
+    <map name="map-suncare">
+      <area target="_blank" alt="선크림화이트" title="선크림화이트"
+            href="https://m-kr.atomy.com/product/000274"
+            coords="238,188,427,1365" shape="rect">
+
+      <area target="_blank" alt="에센스 선" title="에센스 선"
+            href="https://m-kr.atomy.com/product/000276"
+            coords="453,184,657,1367" shape="rect">
+
+      <area target="_blank" alt="프레쉬 선로션" title="프레쉬 선로션"
+            href="https://m-kr.atomy.com/product/001555"
+            coords="666,186,881,1368" shape="rect">
+
+      <area target="_blank" alt="톤업에센스" title="톤업에센스"
+            href="https://m-kr.atomy.com/product/001531"
+            coords="894,185,1098,1368" shape="rect">
+
+      <area target="_blank" alt="어반 쉴드 선 쿠션" title="어반 쉴드 선 쿠션"
+            href="https://m-kr.atomy.com/product/000279"
+            coords="1333,185,1552,1365" shape="rect">
+
+      <area target="_blank" alt="선 스틱" title="선 스틱"
+            href="https://m-kr.atomy.com/product/000286"
+            coords="1568,185,1759,1370" shape="rect">
+
+      <area target="_blank" alt="카밍 선 스틱" title="카밍 선 스틱"
+            href="https://m-kr.atomy.com/product/000780"
+            coords="1775,186,1995,1365" shape="rect">
+
+      <!-- 단종 제품 -->
+      <area alt="세라베베 선 밀크" title="세라베베 선 밀크"
+            coords="1116,188,1322,1369"
+            shape="rect"
+            onclick="return soldOut();">
+    </map>
+  </div>
+
+  <!-- 모바일 좌표 자동 보정 -->
+  <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+  <script>
+    imageMapResize();
+  </script>
+
+  <!-- 단종/미판매 알림 -->
+  <script>
+    function soldOut(){
+      alert("단종 되었습니다.");
+      return false;
+    }
+  </script>
+</body>
+</html>
